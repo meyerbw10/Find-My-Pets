@@ -24,44 +24,6 @@ Animal.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-    },
-    weight: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    breed: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    sex: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    fixed: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    color: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
-    dateLost: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-    },
-    dateFound: {
-      type: DataTypes.DATEONLY,
-    },
-
-    animal_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
   },
   {
     sequelize,
