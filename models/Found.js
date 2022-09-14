@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Lost extends Model {}
+class Found extends Model {}
 
-// Animal is a general purpose model containing identifying characteristics of lost and found pets
+// Found is a child model of the Animal model and defines animals that have been found.
 // Identifying characteristics:
 //  * Id (Number)
 //  * Name (String)
@@ -16,7 +16,7 @@ class Lost extends Model {}
 //  * Approximate date lost (Date)
 //  * Approximate time found (Date)
 
-Lost.init(
+Found.init(
   {
     id: {
         type: DataTypes.INTEGER,
@@ -43,7 +43,7 @@ Lost.init(
       color: {
         type: DataTypes.JSON,
       },
-      dateLost: {
+      dateFound: {
         type: DataTypes.DATEONLY,
       },
       animal_id: {
@@ -58,8 +58,8 @@ Lost.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'lost',
+    modelName: 'found',
   }
 );
 
-module.exports = Lost;
+module.exports = Found;
