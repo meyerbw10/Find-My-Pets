@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Gallery extends Model {}
+class Found extends Model {}
 
-Gallery.init(
+Found.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,13 +15,12 @@ Gallery.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    starting_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    ending_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
+    animal_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
@@ -32,4 +31,4 @@ Gallery.init(
   }
 );
 
-module.exports = Gallery;
+module.exports = Found;
