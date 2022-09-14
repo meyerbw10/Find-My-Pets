@@ -7,13 +7,15 @@ class Animal extends Model {}
 // Identifying characteristics:
 //  * Id (Number)
 //  * Name (String)
-//  * Weight (Number)
+//  * Type (String, i.e. "cat" "dog" "ferret" etc.)
+//  * Weight (pounds) (Number)
 //  * Breed (String)
 //  * Sex (Boolean)
 //  * Spayed/fixed (Boolean)
 //  * Color (JSON, Up to three colors)
 //  * Approximate date lost (Date)
 //  * Approximate time found (Date)
+//  * City (String)
 
 Animal.init(
   {
@@ -24,6 +26,10 @@ Animal.init(
       autoIncrement: true,
     },
     name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -42,13 +48,15 @@ Animal.init(
     color: {
       type: DataTypes.JSON,
     },
-    dateLost: {
+    date_lost: {
       type: DataTypes.DATEONLY,
     },
-    dateFound: {
+    date_found: {
       type: DataTypes.DATEONLY,
     },
-
+    city: {
+      type: DataTypes.STRING,
+    },
     animal_id: {
       type: DataTypes.INTEGER,
       references: {
