@@ -1,10 +1,10 @@
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
-  --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
+  --primary: #7ED957;
+  --secondary: #F9F264;
+  --tertiary: #C99B73;
+  --quatrinary: #6A7672;
   --light: #e3e4e3;
-  --dark: #182c23;
+  --dark: #333641;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
@@ -16,23 +16,16 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  background-color: var(--quatrinary);
+  background-color: var(--light);
 }
 
 a {
-  color: var(--dark);
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:visited {
   color: inherit;
-}
-
-header {
-  padding: 40px;
-  text-align: center;
-  background: var(--primary);
-  color: var(--light);
 }
 
 main {
@@ -50,21 +43,22 @@ aside {
 }
 
 nav {
+  position: absolute;
   display: flex;
-  background-color: var(--secondary);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 6%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav a {
-  color: var(--light);
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 25px;
 }
 
-nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
-}
 
 .gallery {
   flex: 4;
