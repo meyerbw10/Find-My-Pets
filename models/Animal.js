@@ -11,8 +11,7 @@ class Animal extends Model {}
 //  * Breed (String)
 //  * Sex (Boolean)
 //  * Spayed/fixed (Boolean)
-//  * Color (Up to three colors)
-//  * Comments (String)
+//  * Color (JSON, Up to three colors)
 //  * Approximate date lost (Date)
 //  * Approximate time found (Date)
 
@@ -23,6 +22,39 @@ Animal.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    weight: {
+      type: DataTypes.INTEGER,
+    },
+    breed: {
+      type: DataTypes.STRING,
+    },
+    sex: {
+      type: DataTypes.STRING,
+    },
+    fixed: {
+      type: DataTypes.BOOLEAN,
+    },
+    color: {
+      type: DataTypes.JSON,
+    },
+    dateLost: {
+      type: DataTypes.DATEONLY,
+    },
+    dateFound: {
+      type: DataTypes.DATEONLY,
+    },
+
+    animal_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
