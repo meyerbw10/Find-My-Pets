@@ -9,4 +9,4 @@ const User = require('./User');
 //   foreignKey: 'animal_id',
 // });
 
-module.exports = { User};
+module.exports = { User };
