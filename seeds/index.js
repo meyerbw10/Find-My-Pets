@@ -1,13 +1,10 @@
 const sequelize = require('../config/connection');
-const seedLost = require('./lostData');
-const seedFound = require('./foundData');
+const seedAnimal = require('./animalData');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await seedLost();
-
-  await seedFound();
+  await seedAnimal();
 
   process.exit(0);
 };
