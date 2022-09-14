@@ -1,4 +1,4 @@
-const { Found } = require('../models/Found');
+const { Found } = require('../models');
 
 const foundData = [
   {
