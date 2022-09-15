@@ -9,6 +9,7 @@ const lostData = [
     sex: 'male',
     fixed: true,
     color: 'brown',
+    city: 'Columbus',
     dateLost: 1900-08-20,
 
   },

@@ -1,10 +1,77 @@
+<section class="modal">
+  <div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Found Pet</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        </div>
+        <input type="text" id="name"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Breed</span>
+        </div>
+        <input type="text" id="breed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Sex</span>
+        </div>
+        <input type="text" id="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Color</span>
+        </div>
+        <input type="text" id="color" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Date Found</span>
+        </div>
+        <input type="text" id="date-found" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+        </div>
+        <input type="text" id="city" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Weight</span>
+        </div>
+        <input type="text" id="weight" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Fixed?</span>
+        </div>
+        <input type="text" id="fixed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="create-button" class="btn btn-primary">Create Found Pet</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 <section class="container">
-  <h3 class="gallery-name">{{gallery.name}}</h3>
-  <h4>Opening Hour: {{format_time gallery.starting_date}}</h4>
-  <h4>Closing Hour: {{format_time gallery.ending_date}}</h4>
   <section class="flex-row justify-center">
-    {{#each gallery.paintings as |painting|}}
-    {{> painting-details}}
+    {{#each found as |found|}}
+    {{> found-details}}
     {{/each}}
   </section>
 </section>
+
+<script src="/js/foundpet.js"></script>

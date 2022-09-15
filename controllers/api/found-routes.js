@@ -20,9 +20,11 @@ router.post('/', async (req, res) => {
             sex: req.body.sex,
             fixed: req.body.fixed,
             color: req.body.color,
+            city: req.body.city,
             dateLost: req.body.dateLost,
         })
         res.status(200).json(foundPet);
+        console.log('it worked!')
 
         } catch (err) {
         console.log(err);

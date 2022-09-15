@@ -1,4 +1,4 @@
-const { Found } = require('../models/Found');
+const { Found } = require('../models');
 
 const foundData = [
   {
@@ -9,6 +9,7 @@ const foundData = [
     sex: 'male',
     fixed: true,
     color: 'gold',
+    city: 'Pickerington',
     dateLost: 1900-08-20,
 
   },
