@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { Found } = require('../../models')
+const { Lost } = require('../../models')
 
 router.get('/', (req, res) => {
-    Found.findAll()
+    Lost.findAll()
       .then(dbUserData => res.json(dbUserData))
       .catch(err => {
         console.log(err);
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const foundPet = await Found.create({
+        const lostPet = await Lost.create({
             id: req.body.id,
             name: req.body.name,
             weight: req.body.weight,
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
             color: req.body.color,
             dateLost: req.body.dateLost,
         })
-        res.status(200).json(foundPet);
+        res.status(200).json(lostPet);
 
         } catch (err) {
         console.log(err);
