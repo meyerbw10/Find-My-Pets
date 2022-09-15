@@ -32,6 +32,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  
 }
 
 aside {
@@ -43,7 +44,6 @@ aside {
 }
 
 nav {
-  position: absolute;
   display: flex;
   top: 0;
   left: 0;
