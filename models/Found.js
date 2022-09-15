@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Found extends Model {}
 
-// Found is a child model of the Animal model and defines animals that have been found.
+// Found defines animals that have been found
 // Identifying characteristics:
 //  * Id (Number)
 //  * Name (String)
@@ -45,6 +45,9 @@ Found.init(
       },
       dateFound: {
         type: DataTypes.DATEONLY,
+      },
+      city: {
+        type: DataTypes.STRING,
       },
       animal_id: {
         type: DataTypes.INTEGER,

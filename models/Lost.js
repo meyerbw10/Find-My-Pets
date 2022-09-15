@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Lost extends Model {}
 
-// Animal is a general purpose model containing identifying characteristics of lost and found pets
+// Lost defines lost pets
 // Identifying characteristics:
 //  * Id (Number)
 //  * Name (String)
@@ -45,6 +45,9 @@ Lost.init(
       },
       dateLost: {
         type: DataTypes.DATEONLY,
+      },
+      city: {
+        type: DataTypes.STRING,
       },
       animal_id: {
         type: DataTypes.INTEGER,
