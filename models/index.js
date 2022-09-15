@@ -1,14 +1,13 @@
 const User = require('./User');
 const Found = require('./Found')
 const Lost = require('./Lost')
+/*
+Lost.belongsTo(User, {
+    foreignKey: 'id',
+});
 
-
-// Gallery.hasMany(Painting, {
-//   foreignKey: 'animal_id',
-// });
-
-// Painting.belongsTo(Gallery, {
-//   foreignKey: 'animal_id',
-// });
+Found.belongsTo(User, {
+    foreignKey: 'id',
+});*/
 
 module.exports = { User, Found, Lost};
