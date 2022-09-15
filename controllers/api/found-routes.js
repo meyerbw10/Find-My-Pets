@@ -2,8 +2,14 @@ const router = require('express').Router();
 const { Found } = require('../../models')
 
 router.get('/', async (req, res) => {
-    res.render('all');
-})
+    const foundData = await Found.findAll().catch((err) => { 
+        res.json(err);
+      });
+      // We use map() to iterate over dishData and then add .get({ plain: true }) each object to serialize it. 
+      const foundpets = foundData.map((found) => found.get({ plain: true }));
+      // We render the template, 'all', passing in dishes, a new array of serialized objects.
+      res.render('all', { foundpets });
+      });
 
 router.post('/', async (req, res) => {
     try {
