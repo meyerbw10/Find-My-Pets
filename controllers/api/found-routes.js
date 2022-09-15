@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
             dateLost: req.body.dateLost,
         })
         res.status(200).json(foundPet);
+        console.log('it worked!')
 
         } catch (err) {
         console.log(err);
