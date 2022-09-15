@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { Found } = require('../../models')
 
+router.get('/', async (req, res) => {
+    res.render('all');
+})
+
 router.post('/', async (req, res) => {
     try {
         const foundPet = await Found.create({
