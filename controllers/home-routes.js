@@ -18,4 +18,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+
+// Lost route
+
+
+// Found Route
+
 module.exports = router;

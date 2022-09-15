@@ -1,5 +1,6 @@
 const User = require('./User');
 const Found = require('./Found')
+const Lost = require('./Lost')
 
 
 // Gallery.hasMany(Painting, {
@@ -10,4 +11,4 @@ const Found = require('./Found')
 //   foreignKey: 'animal_id',
 // });
 
-module.exports = { User, Found};
+module.exports = { User, Found, Lost};
