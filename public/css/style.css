@@ -61,6 +61,7 @@ nav {
   padding: 15px 6%;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
 
 nav ul li {
