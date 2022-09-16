@@ -29,7 +29,7 @@ Lost.init(
         allowNull: false,
       },
       weight: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       breed: {
         type: DataTypes.STRING,

@@ -16,7 +16,6 @@ const lostPetFormHandler = async (event) => {
         body: JSON.stringify({ name, weight, breed, sex, fixed, color, city, dateLost }),
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log('it worked!')
       if (response.ok) {
         document.location.replace('/');
       } else {
