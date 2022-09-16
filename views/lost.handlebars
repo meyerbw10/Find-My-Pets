@@ -23,9 +23,15 @@
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Sex</span>
+        <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <input type="text" id="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <label for="pet-select">Choose a sex:</label>
+        <select name="pets" id="pet-select">
+          <option value="">choose an option</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="unknown">Unknown</option>
+        </select>
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -35,10 +41,13 @@
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Date lost</span>
+        <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <input type="text" id="date-lost" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
+        <label for="start">Choose Date lost:</label>
+
+        <input type="date" id="start" name="trip-start"
+            value="2022-09-16"
+            min="2021-01-01" max="2022-12-31">
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">City</span>
@@ -47,16 +56,27 @@
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Weight</span>
+        <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <input type="text" id="weight" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <label for="pet-select">Choose a Weight:</label>
+        <select name="pets" id="pet-select">
+          <option value="">choose an option</option>
+          <option value="small">Small: 2-22 LBS</option>
+          <option value="medium">Medium: 24-57 LBS</option>
+          <option value="large">large: 59-99 LBS</option>
+        </select>
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Fixed?</span>
+        <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <input type="text" id="fixed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
+        <label for="pet-select">Choose if Fixed:</label>
+        <select name="pets" id="pet-select">
+          <option value="">choose an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="unknown">Unknown</option>
+        </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-btn-secondary" data-dismiss="modal">Close</button>
@@ -66,12 +86,5 @@
   </div>
 </div>
 </section>
-{{!-- <section class="container">
-  <section class="flex-row justify-center">
-    {{#each lost as |lost|}}
-    {{> lost-details}}
-    {{/each}}
-  </section>
-</section> --}}
 
 <script src="/js/lostpet.js"></script>

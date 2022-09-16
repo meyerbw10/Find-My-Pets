@@ -50,10 +50,10 @@ Found.init(
         type: DataTypes.STRING,
       },
       animal_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         references: {
           model: 'user',
-          key: 'username',
+          key: 'id',
         },
       },
   },

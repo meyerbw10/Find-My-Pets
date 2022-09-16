@@ -12,4 +12,11 @@
     <h5 class="card-title">{{weight}}</h5>
   </div>
 </div>
+<div class="container">
+  <div class="flex-row justify-center">
+    {{#each found as |found|}}
+    {{> found-details}}
+    {{/each}}
+  </div>
+</div>
 </section>

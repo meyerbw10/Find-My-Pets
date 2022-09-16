@@ -1,13 +1,13 @@
 const User = require('./User');
 const Found = require('./Found')
 const Lost = require('./Lost')
-
+/*
 Lost.belongsTo(User, {
-    foreignKey: 'username',
+    foreignKey: 'id',
 });
 
 Found.belongsTo(User, {
-    foreignKey: 'username',
-});
+    foreignKey: 'id',
+});*/
 
 module.exports = { User, Found, Lost};
