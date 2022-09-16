@@ -25,6 +25,10 @@ const foundPetFormHandler = async (event) => {
     }
   };
 
+  $('#findPetBtn').click( "click", function() {
+    $('#myModal').modal('show');
+});
+
   document
   .querySelector('#create-button')
   .addEventListener('click', foundPetFormHandler);
