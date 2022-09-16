@@ -12,18 +12,26 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
+
+        var isFixed;
+        if(req.body.fixed == "yes") {
+          isFixed = true;
+        } else {
+          isFixed = false;
+        }
+
         const lostPet = await Lost.create({
-            id: req.body.id,
             name: req.body.name,
             weight: req.body.weight,
             breed: req.body.breed,
             sex: req.body.sex,
-            fixed: req.body.fixed,
+            fixed: isFixed,
             color: req.body.color,
             city: req.body.city,
             dateLost: req.body.dateLost,
         })
         res.status(200).json(lostPet);
+        console.log('it worked!')
 
         } catch (err) {
         console.log(err);
