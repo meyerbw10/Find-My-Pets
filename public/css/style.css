@@ -22,7 +22,7 @@ body {
   background-image:linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(/images/body-background-img.jpg);
   background-size: cover;
   width: 100%;
-  height: 80vh;
+  height: 78vh;
   opacity: 0.98;
   display: flex;
   align-content: center;
@@ -61,6 +61,7 @@ aside {
   background-color: white;
   opacity: .98;
   background-clip: text;
+  height: 120px;
 }
 .goToLinks {
   display: flex;
@@ -68,11 +69,73 @@ aside {
   justify-content: space-between;
   text-decoration: none;
 }
+
 ul {
   list-style-type: none;
 }
+
 .links {
   padding: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.socialMediaLinks span{
+	display:none; 
+  
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.hpHeader {
+  color: #7ED957;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hpBody {
+  color: rgb(249, 249, 173);
+  text-align: center;
+  margin: 30px;
+}
+
+.hpText {
+  font-size: xx-small;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.socialMediaLinks a:before{
+	font-family: FontAwesome;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.facebookLink:before{
+	content: '\f082';
+  color: var(--primary);
+}
+.instagramLink:before{
+	content: '\f16d';
+  color: var(--primary);
+}
+.twitterLink:before{
+	content: '\f099';
+  color: var(--primary);
+}
+.youtubeLink:before{
+	content: "\f16a";
+  color: var(--primary);
 }
 
 .gallery {
