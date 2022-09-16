@@ -1,5 +1,6 @@
 :root {
   --primary: #7ED957;
+  --prim2: #baf99f;
   --secondary: #F9F264;
   --tertiary: #c89a71;
   --thirdor: #e6c4a6;
@@ -235,31 +236,22 @@ footer {
   align-items: center;
   display: flex;
   justify-content: center;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 70%;
+  max-height: 70%;
 }
 
 .btn-btn-secondary {
-  background-color: var(--primary);
+  background-color: var(--tertiary);
   border-radius: 3px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--tertiary);
   padding: 7px 15px;
+  margin: 7px 0;
 }
 
 .btn-btn-secondary:hover {
   background-color: var(--thirdor);
 }
 
-.btn-btn-primary {
-  background-color: var(--primary);
-  border-radius: 3px;
-  border: 1px solid var(--primary);
-  padding: 7px 15px;
-}
-
-.btn-btn-.btn-btn-primary {
-  background-color: var(--thirdor);
-}
 
 .modalFound {
   background-color: var(--dark);

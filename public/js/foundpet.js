@@ -23,20 +23,11 @@ const foundPetFormHandler = async (event) => {
         alert('Failed to create found pet :(');
       }
     }
-    if (name && weight && breed && sex && fixed && color && city && dateFound) {
-      const response = await fetch('/api/found', {
-        method: 'GET',
-        body: JSON.stringify({ name, weight, breed, sex, fixed, color, city, dateFound }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-      console.log('it worked!')
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to create found pet :(');
-      }
-    }
   };
+
+  $('#findPetBtn').click( "click", function() {
+    $('#myModal').modal('show');
+});
 
   document
   .querySelector('#create-button')

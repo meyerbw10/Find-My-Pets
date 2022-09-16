@@ -27,5 +27,11 @@ router.get('/lost', async (req, res) => {
 router.get('/found', async (req, res) => {
   res.render('found')
 })
+router.get('/browsefound', async (req, res) => {
+  res.render('browsefound')
+})
+router.get('/browselost', async (req, res) => {
+  res.render('browselost')
+})
 
 module.exports = router;
