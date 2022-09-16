@@ -17,11 +17,15 @@
       <img src="/images/Paws_Finder-removebg-preview (2).png"  alt="">
     <ul class="goToLinks">
       <li class="links"><a href="/">Home</a></li>
+      {{#if loggedIn}}
+      <li class="links" id="logout">Logout</li>
+      {{else}}
       <li class="links"><a href="/login">Login</a></li>
-      <li class="links"><a href="/browselost">Browse Lost Pet</a></li>
-      <li class="links"><a href="/api/found/">Browse Found Pet</a></li>
-      <li class="links"><a href="/lost">Post Lost Pet</a></li>
-      <li class="links"><a href="/found">Post Found Pet</a></li>
+      {{/if}}x
+      <li class="links"><a href="/browselost">Browse Lost Pets</a></li>
+      <li class="links"><a href="/browsefound">Browse Found Pets</a></li>
+      <li class="links"><a href="/lost">List Lost Pet</a></li>
+      <li class="links"><a href="/found">List Found Pet</a></li>
       
     </ul>
     
@@ -43,6 +47,10 @@
   <footer>
     <p class="hpText">Use of this service, website, or application constitutes acceptance of all terms listed above. Super Stud Squad and its associated logos are trademarks of OSU Bootcamp, Inc. © 2022, Patrick Barney, David Lowry, Bradley Meyer, Lawrence 'The Billy' Carr </p>
   </footer>
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 </body>
 
