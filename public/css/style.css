@@ -1,7 +1,8 @@
 :root {
   --primary: #7ED957;
   --secondary: #F9F264;
-  --tertiary: #C99B73;
+  --tertiary: #c89a71;
+  --thirdor: #e6c4a6;
   --quatrinary: #6A7672;
   --light: #e3e4e3;
   --dark: #333641;
@@ -52,7 +53,7 @@ aside {
   text-align: left;
   color: var(--light);
 }
-
+/* nav Bar */
 .topBar {
   display: flex;
   justify-content: space-between;
@@ -138,7 +139,7 @@ footer {
   color: var(--primary);
 }
 
-.gallery {
+/* .gallery {
   flex: 4;
   background-color: #fff;
   padding: 50px;
@@ -146,7 +147,7 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .btn-no-style {
   background: none;
@@ -159,12 +160,12 @@ footer {
   margin-left: 16px;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
-.painting {
+/* .painting {
   width: 50%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -175,7 +176,7 @@ img {
   text-align: center;
   padding: 10px 20px;
   font-weight: bold;
-}
+} */
 
 /* CARDS */
 .card {
@@ -188,7 +189,7 @@ img {
 }
 
 .login-card {
-  margin: 0 0 20px 0;
+  margin: 80px 0;
   flex: 0 0 50%;
   max-width: 50%;
   max-height: 50%;
@@ -197,6 +198,17 @@ img {
   border-radius: var(--border-radius);
   background-color: var(--dark);
   color: var(--primary);
+}
+
+.btn-btn-primary {
+  background-color: var(--tertiary);
+  border-radius: 3px;
+  border: 1px solid var(--tertiary);
+  padding: 7px 15px;
+}
+
+.btn-btn-primary:hover {
+  background-color: var(--thirdor);
 }
 
 .card header {
@@ -215,7 +227,53 @@ img {
   font-weight: bold;
 }
 
-.gallery-name {
+.modal {
+  background-color: var(--dark);
+  margin: 80px 0;
+  color: var(--primary);
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.btn-btn-secondary {
+  background-color: var(--primary);
+  border-radius: 3px;
+  border: 1px solid var(--primary);
+  padding: 7px 15px;
+}
+
+.btn-btn-secondary:hover {
+  background-color: var(--thirdor);
+}
+
+.btn-btn-primary {
+  background-color: var(--primary);
+  border-radius: 3px;
+  border: 1px solid var(--primary);
+  padding: 7px 15px;
+}
+
+.btn-btn-.btn-btn-primary {
+  background-color: var(--thirdor);
+}
+
+.modalFound {
+  background-color: var(--dark);
+  margin: 80px 0;
+  color: var(--primary);
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 70%;
+  max-height: 70%;
+}
+
+/* .gallery-name {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);
@@ -224,7 +282,7 @@ img {
   padding-bottom: 30px;
   padding-right: 100px;
   padding-left: 100px;
-}
+} */
 
 /* LAYOUT */
 .container {
