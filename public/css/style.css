@@ -53,27 +53,26 @@ aside {
   color: var(--light);
 }
 
-nav {
+.topBar {
   display: flex;
   justify-content: space-between;
+  font-size: 22px;
+  font-weight: 200;
+  background-color: white;
+  opacity: .98;
+  background-clip: text;
 }
-
-nav ul li {
-  list-style: none;
-  display: inline-block;
-
-}
-.container {
-  margin: auto;
+.goToLinks {
   display: flex;
-  padding: 5px 0;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
 }
-
-.logo {
-  cursor: pointer;
-
+ul {
+  list-style-type: none;
+}
+.links {
+  padding: 10px;
 }
 
 .gallery {
