@@ -16,7 +16,6 @@ const foundPetFormHandler = async (event) => {
         body: JSON.stringify({ name, weight, breed, sex, fixed, color, city, dateFound }),
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log('it worked!')
       if (response.ok) {
         document.location.replace('/');
       } else {
@@ -24,10 +23,6 @@ const foundPetFormHandler = async (event) => {
       }
     }
   };
-
-  $('#findPetBtn').click( "click", function() {
-    $('#myModal').modal('show');
-});
 
   document
   .querySelector('#create-button')

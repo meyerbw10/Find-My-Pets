@@ -13,12 +13,7 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     try {
 
-        var isFixed;
-        if(req.body.fixed == "yes") {
-          isFixed = true;
-        } else {
-          isFixed = false;
-        }
+        var isFixed = (req.body.fixed == "Yes");
 
         const lostPet = await Lost.create({
             name: req.body.name,
@@ -31,8 +26,6 @@ router.post('/', async (req, res) => {
             dateLost: req.body.dateLost,
         })
         res.status(200).json(lostPet);
-        console.log('it worked!')
-
         } catch (err) {
         console.log(err);
         res.status(404).json(err);
