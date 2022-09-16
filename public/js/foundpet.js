@@ -1,7 +1,6 @@
 const foundPetFormHandler = async (event) => {
     event.preventDefault();
     
-    const id = document.querySelector('#id').value.trim();
     const name = document.querySelector('#name').value.trim();
     const weight = document.querySelector('#weight').value.trim();
     const breed = document.querySelector('#breed').value.trim();
@@ -9,12 +8,12 @@ const foundPetFormHandler = async (event) => {
     const fixed = document.querySelector('#fixed').value.trim();
     const color = document.querySelector('#color').value.trim();
     const city = document.querySelector('#city').value.trim();
-    const dateLost = document.querySelector('#dateLost').value.trim();
+    const dateFound = document.querySelector('#date-found').value.trim();
   
-    if (id && name && weight && breed && sex && fixed && color && city && dateLost) {
+    if (name && weight && breed && sex && fixed && color && city && dateFound) {
       const response = await fetch('/api/found', {
         method: 'POST',
-        body: JSON.stringify({ id, name, weight, breed, sex, fixed, color, city, dateLost }),
+        body: JSON.stringify({ name, weight, breed, sex, fixed, color, city, dateFound }),
         headers: { 'Content-Type': 'application/json' },
       });
       console.log('it worked!')
@@ -28,4 +27,4 @@ const foundPetFormHandler = async (event) => {
 
   document
   .querySelector('#create-button')
-  .addEventListener('submit', foundPetFormHandler);
+  .addEventListener('click', foundPetFormHandler);
