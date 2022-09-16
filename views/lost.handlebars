@@ -1,4 +1,4 @@
-<section class="modal">
+<section id="myModal" class="modalFound">
 <div class="modal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -11,66 +11,61 @@
       <div class="modal-body">
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        <span class="input-group-text" id="inputGroup-sizing-default">What is the animal's name?</span>
         </div>
-        <input type="text" id="name"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Name">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Breed</span>
+        <span class="input-group-text" id="inputGroup-sizing-default">What is the animal's breed?</span>
         </div>
-        <input type="text" id="breed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="breed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Breed of the animal">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <label for="pet-select">Choose a sex:</label>
+         <label for="pet-select">Please select the animal's sex:</label>
         <select name="pets" id="pet-select">
           <option value="">choose an option</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="unknown">Unknown</option>
         </select>
-        </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Color</span>
+        <span class="input-group-text" id="inputGroup-sizing-default">What color is the animal?</span>
         </div>
-        <input type="text" id="color" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="color" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="All colors, seperated by ,">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default"></span>
-        </div>
-        <label for="start">Choose Date lost:</label>
+         <label for="start">Choose Date Lost:</label>
 
-        <input type="date" id="start" name="trip-start"
-            value="2022-09-16"
-            min="2021-01-01" max="2022-12-31">
+        <input type="date" id="start" name="trip-start">
         <div class="input-group mb-3">
         <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+        <span class="input-group-text" id="inputGroup-sizing-default">City:</span>
         </div>
-        <input type="text" id="city" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="city" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="City you lost the animal in">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <label for="pet-select">Choose a Weight:</label>
+        <label for="pet-select">Please select a size:</label>
         <select name="pets" id="pet-select">
           <option value="">choose an option</option>
           <option value="small">Small: 2-22 LBS</option>
           <option value="medium">Medium: 24-57 LBS</option>
           <option value="large">large: 59-99 LBS</option>
         </select>
-        </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default"></span>
         </div>
-        <label for="pet-select">Choose if Fixed:</label>
+        <label for="pet-select">Is the animal spayed/neutered?</label>
         <select name="pets" id="pet-select">
           <option value="">choose an option</option>
           <option value="yes">Yes</option>
