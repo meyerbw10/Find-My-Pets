@@ -1,13 +1,17 @@
 const router = require('express').Router();
 const { Found } = require('../../models')
 
-router.get('/', (req, res) => {
-    Found.findAll()
-      .then(dbUserData => res.json(dbUserData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });  
+router.get('/', async (req, res) => {
+    try{
+      const foundPetData = await Found.findAll()
+      // console.log(foundPetData)
+      const pets = foundPetData.map((pet) => pet.get({plain: true}))
+      console.log(pets)
+      res.render('browsefound', {pets})
+    }
+    catch (err){
+      res.status(500).json(err)
+    }
 });
 
 router.post('/', async (req, res) => {
