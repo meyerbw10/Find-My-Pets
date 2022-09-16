@@ -1,5 +1,5 @@
-<section class="modal">
-  <div class="modal" tabindex="-1">
+<section class="modalFound">
+<div class="modal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -13,44 +13,66 @@
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Breed</span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="breed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Sex</span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Color</span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="color" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Date Found</span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="date-found" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+        </div>
+        <input type="text" id="city" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
         <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Weight</span>
         </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" id="weight" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Fixed?</span>
+        </div>
+        <input type="text" id="fixed" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Create Found Pet</button>
+        <button type="button" id="create-button" class="btn btn-primary">Create Found Pet</button>
       </div>
     </div>
   </div>
 </div>
+{{!-- <div class="container">
+  <div class="flex-row justify-center">
+    {{#each found as |found|}}
+    {{> found-details}}
+    {{/each}}
+  </div>
+</div> --}}
 </section>
+
+
+<script src="/js/foundpet.js"></script>
