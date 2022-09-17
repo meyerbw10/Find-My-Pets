@@ -18,17 +18,15 @@
     <ul class="goToLinks">
       <li class="links"><a href="/">Home</a></li>
       {{#if loggedIn}}
-      <li class="links" id="logout">Logout</li>
+      <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
       <li class="links"><a href="/login">Login</a></li>
-      {{/if}}x
+      {{/if}}
       <li class="links"><a href="/browselost">Browse Lost Pets</a></li>
       <li class="links"><a href="/browsefound">Browse Found Pets</a></li>
       <li class="links"><a href="/lost">List Lost Pet</a></li>
       <li class="links"><a href="/found">List Found Pet</a></li>
-      
     </ul>
-    
   </nav>
 
   <div class="background">
