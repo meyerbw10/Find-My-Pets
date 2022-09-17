@@ -4,11 +4,11 @@ const { Lost } = require('../../models')
 
 router.get('/browselost', async (req, res) => {
   try{
-    const lostPetData = await Found.findAll()
+    const lostPetData = await Lost.findAll();
     // console.log(foundPetData)
-    const losts = lostPetData.map((lost) => lost.get({plain: true}))
-    console.log(losts)
-    res.render('browselost', {losts})
+    const pets = lostPetData.map((pet) => pet.get({plain: true}))
+    console.log(pets)
+    res.render('browsefound', {pets})
   }
   catch (err){
     res.status(500).json(err)
