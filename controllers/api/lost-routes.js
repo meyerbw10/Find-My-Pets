@@ -1,6 +1,20 @@
 const router = require('express').Router();
 const { Lost } = require('../../models')
 
+
+router.get('/browselost', async (req, res) => {
+  try{
+    const lostPetData = await Lost.findAll();
+    // console.log(foundPetData)
+    const pets = lostPetData.map((pet) => pet.get({plain: true}))
+    console.log(pets)
+    res.render('browsefound', {pets})
+  }
+  catch (err){
+    res.status(500).json(err)
+  }
+});
+
 router.get('/', (req, res) => {
     Lost.findAll()
       .then(dbUserData => res.json(dbUserData))
