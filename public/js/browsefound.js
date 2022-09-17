@@ -1,13 +1,12 @@
-// const browsefound = async () => {
-//     const response = await fetch('/api/found/', {
-//         method: 'GET',
-//         headers: { 'Content-Type': 'application/json' },
-//       });
-
-//       if(response.ok){
-//         console.log(response)
-//         console.log(foundPets)
-//       }
-// }
-
-// browsefound()
+router.get('/browsefound', async (req, res) => {
+    try{
+      const foundPetData = await Found.findAll()
+      // console.log(foundPetData)
+      const pets = foundPetData.map((pet) => pet.get({plain: true}))
+      console.log(pets)
+      res.render('browsefound', {pets})
+    }
+    catch (err){
+      res.status(500).json(err)
+    }
+});
