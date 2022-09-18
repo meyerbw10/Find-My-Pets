@@ -17,7 +17,7 @@ const lostPetFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/api/lost/browselost');
       } else {
         alert('Failed to create lost pet :(');
       }

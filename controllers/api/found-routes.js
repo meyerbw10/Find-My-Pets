@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Found } = require('../../models')
 
-router.get('/browse', async (req, res) => {
+router.get('/browsefound', async (req, res) => {
     try{
       const foundPetData = await Found.findAll()
       // console.log(foundPetData)
@@ -45,4 +45,5 @@ router.post('/', async (req, res) => {
         res.status(404).json(err);
     }
   });
+  
 module.exports = router;
