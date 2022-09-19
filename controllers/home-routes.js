@@ -19,18 +19,18 @@ router.get('/login', (req, res) => {
 
 
 // Lost route
-router.get('/lost', async (req, res) => {
+router.get('/lost', withAuth, async (req, res) => {
   res.render('lost')
 });
 
 // Found Route
-router.get('/found', async (req, res) => {
+router.get('/found', withAuth, async (req, res) => {
   res.render('found')
 })
 router.get('/browsefound', async (req, res) => {
   res.render('browsefound')
 })
-router.get('/browselost', async (req, res) => {
+router.get('/browselost', withAuth, async (req, res) => {
   res.render('browselost')
 })
 
