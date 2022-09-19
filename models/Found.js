@@ -49,13 +49,6 @@ Found.init(
       city: {
         type: DataTypes.STRING,
       },
-      animal_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
-      },
   },
   {
     sequelize,
