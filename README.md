@@ -17,7 +17,7 @@
 
 ## Project Description 
 
-For our 2nd Project. My Team wanted to come up with and create a website that allows users to list lost and found Pets to try and Help pets find their owners. We wanted to work togeather to show our collaboration on what we've learned on connecting Front-End and Back-End Languages. My projects are on display via Github, with clickable images as well as my resume in a clickable PDF file. 
+For our 2nd Project. My Team wanted to come up with and create a website that allows users to list lost and found Pets to try and Help pets find their owners. We wanted to work together to show our collaboration on what we've learned on connecting Front-End and Back-End Languages. My projects are on display via Github, with clickable images as well as my resume in a clickable PDF file. 
 
 ---
 
