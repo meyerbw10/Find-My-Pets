@@ -9,12 +9,12 @@ const foundPetFormHandler = async (event) => {
     const color = document.querySelector('#color').value.trim();
     const city = document.querySelector('#city').value.trim();
     const dateFound = document.querySelector('#date-found').value.trim();
-    const email = document.querySelector('#email').value.trim();
+    const species = document.querySelector('#species').value.trim();
   
-    if (name && weight && breed && sex && fixed && color && city && dateFound && email) {
+    if (name && weight && breed && sex && fixed && color && city && dateFound && species) {
       const response = await fetch('/api/found', {
         method: 'POST',
-        body: JSON.stringify({ name, weight, breed, sex, fixed, color, city, dateFound, email }),
+        body: JSON.stringify({ name, weight, breed, sex, fixed, color, city, dateFound, species }),
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
