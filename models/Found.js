@@ -49,6 +49,9 @@ Found.init(
       city: {
         type: DataTypes.STRING,
       },
+      contact: {
+        type: DataTypes.STRING,
+      },
       animal_id: {
         type: DataTypes.INTEGER,
         references: {
