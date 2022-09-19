@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Found } = require('../../models')
+const withAuth = require('../../utils/auth');
 
 router.get('/browsefound', async (req, res) => {
     try{
@@ -23,7 +24,7 @@ router.get('/', (req, res) => {
     });  
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
 
         var isFixed = (req.body.fixed == "Yes");
