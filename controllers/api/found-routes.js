@@ -39,6 +39,7 @@ router.post('/', withAuth, async (req, res) => {
             color: req.body.color,
             city: req.body.city,
             dateLost: req.body.dateLost,
+            contact: req.body.email,
         })
         res.status(200).json(foundPet);
         } catch (err) {
