@@ -31,12 +31,12 @@ router.get('/found', withAuth, async (req, res) => {
   })
 })
 
-router.get('/browsefound', withAuth, async (req, res) => {
+router.get('/api/found/browsefound', withAuth, async (req, res) => {
   res.render('browsefound', {
     loggedIn: req.session.loggedIn,
   })
 })
-router.get('/browselost', withAuth, async (req, res) => {
+router.get('/api/lost/browselost', withAuth, async (req, res) => {
   res.render('browselost', {
     loggedIn: req.session.loggedIn,
   })
