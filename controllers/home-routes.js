@@ -4,7 +4,9 @@ const withAuth = require('../utils/auth');
 
 // GET homepage
 router.get('/', async (req, res) => {
-  res.render('homepage')
+  res.render('homepage', {
+  loggedIn: req.session.loggedIn,
+  })
 });
 
 router.get('/login', (req, res) => {
@@ -16,21 +18,28 @@ router.get('/login', (req, res) => {
 });
 
 // Lost route
-router.get('/lost', async (req, res) => {
-  res.render('lost')
+router.get('/lost', withAuth, async (req, res) => {
+  res.render('lost', {
+    loggedIn: req.session.loggedIn,
+  })
 });
 
 // Found Route
-router.get('/found', async (req, res) => {
-  res.render('found')
+router.get('/found', withAuth, async (req, res) => {
+  res.render('found', {
+    loggedIn: req.session.loggedIn,
+  })
 })
 
-router.get('/browsefound', async (req, res) => {
-  res.render('browsefound')
+router.get('/browsefound', withAuth, async (req, res) => {
+  res.render('browsefound', {
+    loggedIn: req.session.loggedIn,
+  })
 })
-
-router.get('/browselost', async (req, res) => {
-  res.render('browselost')
+router.get('/browselost', withAuth, async (req, res) => {
+  res.render('browselost', {
+    loggedIn: req.session.loggedIn,
+  })
 })
 
 module.exports = router;
