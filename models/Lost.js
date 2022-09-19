@@ -49,8 +49,6 @@ Lost.init(
       city: {
         type: DataTypes.STRING,
       },
-      species: {
-        type: DataTypes.STRING,
       contact: {
         type: DataTypes.STRING,
       },
@@ -62,7 +60,6 @@ Lost.init(
         },
       },
   },
-},
   {
     sequelize,
     freezeTableName: true,
