@@ -49,6 +49,9 @@ Lost.init(
       city: {
         type: DataTypes.STRING,
       },
+      species: {
+        type: DataTypes.STRING,
+      },
   },
   {
     sequelize,

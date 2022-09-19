@@ -31,6 +31,9 @@ Found.init(
       weight: {
         type: DataTypes.STRING,
       },
+      species: {
+        type: DataTypes.STRING,
+      },
       breed: {
         type: DataTypes.STRING,
       },
