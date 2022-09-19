@@ -33,7 +33,6 @@ router.post('/', withAuth, async (req, res) => {
         const foundPet = await Found.create({
             name: req.body.name,
             weight: req.body.weight,
-            species: req.body.species,
             breed: req.body.breed,
             sex: req.body.sex,
             fixed: isFixed,

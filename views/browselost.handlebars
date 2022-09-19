@@ -1,16 +1,17 @@
 {{#each losts as |lost|}}
 <section class="card">
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
-  <div class="card-header">Lost!</div>
+  <div class="card border-dark mb-3">
+  <div id="cardHeader" class="card-header">Lost!</div>
   <div class="card-body text-white">
-    <h5 class="card-title">{{lost.name}}</h5>
-    <h5 class="card-title">{{lost.species}}</h5>
-    <h5 class="card-title">{{lost.breed}}</h5>
-    <h5 class="card-title">{{lost.sex}}</h5>
-    <h5 class="card-title">{{lost.color}}</h5>
-    <h5 class="card-title">{{lost.dateLost}}</h5>
-    <h5 class="card-title">{{lost.city}}</h5>
-    <h5 class="card-title">{{lost.weight}}</h5>
+    <h5 class="card-title">Name: {{lost.name}}</h5>
+    <h5 class="card-title">Breed: {{lost.breed}}</h5>
+    <h5 class="card-title">Sex: {{lost.sex}}</h5>
+    <h5 class="card-title">Color: {{lost.color}}</h5>
+    <h5 class="card-title">Date Lost: {{lost.dateLost}}</h5>
+    <h5 class="card-title">City Lost In: {{lost.city}}</h5>
+    <h5 class="card-title">Size: {{lost.weight}}</h5>
+    <h5 class="card-title">Fixed? {{lost.fixed}}</h5>
+    <h5 class="card-title">Contact: {{pet.contact}}</h5>
   </div>
 </div>
 </section>
