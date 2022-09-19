@@ -62,6 +62,7 @@ Lost.init(
         },
       },
   },
+},
   {
     sequelize,
     freezeTableName: true,
