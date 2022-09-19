@@ -220,10 +220,10 @@ footer {
 .card {
   margin: 20px;
   flex: 0 1 300px;
-  border: 7px double var(--dark);
+  border: 7px double var(--tertiary);
   border-radius: 10px;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--dark);
+  color: var(--white);
 }
 
 .login-card {
@@ -310,7 +310,7 @@ footer {
   display: flex;
   justify-content: center;
   max-width: 70%;
-  max-height: 85%;
+  max-height: 900px;
 }
 
 /* LAYOUT */
