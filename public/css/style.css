@@ -65,6 +65,71 @@ aside {
   background-clip: text;
   height: 120px;
 }
+
+@media screen and (max-width: 900px) {
+  .topBar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 250px;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  .topBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .topBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+  }
+
+  .goToLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .background {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 30px;
+    flex: 0 1 150px;
+    border: 7px double var(--dark);
+    border-radius: 10px;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+
+  .card header {
+    color: var(--light);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: var(--tertiary);
+    padding: 0.625rem;
+    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  }
+  
+  .card-body {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+
+
 .goToLinks {
   display: flex;
   align-items: center;
@@ -140,16 +205,6 @@ footer {
   color: var(--primary);
 }
 
-/* .gallery {
-  flex: 4;
-  background-color: #fff;
-  padding: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-} */
-
 .btn-no-style {
   background: none;
   border: none;
@@ -161,32 +216,14 @@ footer {
   margin-left: 16px;
 }
 
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
-
-/* .painting {
-  width: 50%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-}
-
-.painting-details {
-  text-align: center;
-  padding: 10px 20px;
-  font-weight: bold;
-} */
-
 /* CARDS */
 .card {
   margin: 20px;
   flex: 0 1 300px;
-  border: 7px double var(--dark);
+  border: 7px double var(--tertiary);
   border-radius: 10px;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--dark);
+  color: var(--white);
 }
 
 .login-card {
@@ -194,6 +231,17 @@ footer {
   flex: 0 0 50%;
   max-width: 50%;
   max-height: 50%;
+  padding: 5px;
+  border: 2px solid var(--tertiary);
+  border-radius: var(--border-radius);
+  background-color: var(--dark);
+  color: var(--primary);
+}
+.login-card-2 {
+  margin: 80px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  max-height: 62%;
   padding: 5px;
   border: 2px solid var(--tertiary);
   border-radius: var(--border-radius);
@@ -262,7 +310,7 @@ footer {
   display: flex;
   justify-content: center;
   max-width: 70%;
-  max-height: 70%;
+  max-height: 900px;
 }
 
 /* LAYOUT */

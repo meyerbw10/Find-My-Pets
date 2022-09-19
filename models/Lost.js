@@ -51,6 +51,15 @@ Lost.init(
       },
       species: {
         type: DataTypes.STRING,
+      contact: {
+        type: DataTypes.STRING,
+      },
+      animal_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
       },
   },
   {
